@@ -1,0 +1,23 @@
+.hidden{
+display: none;
+}
+
+*{
+text-align: center;
+font-family: Anton, 'Times New Roman', Helvetica;
+}
+
+#state-choice{
+margin: 15px;
+}
+
+li{
+list-style: none;
+}
+
+header {
+background-color: rgba(219, 196, 168, 0.377);
+color:darkred;
+padding: 20px;
+border-radius: 12px;
+}
