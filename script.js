@@ -23,7 +23,7 @@ let resultsForDisplay=[responseJson.data];
 for(let i =0; i < resultsForDisplay[0].length; i++){
 responseDisplay += `<div class ="panel"><h3><li>${resultsForDisplay[0][i].fullName}:</li></h3></div>
 <div class = "panel"><h3><li>${resultsForDisplay[0][i].description}</li></h3></div>
-<div class = "panel"><h3><li><a href=${resultsForDisplay[0][i].url}>${resultsForDisplay[0][i].url}</a>
+<div class = "panel"><h3><li><a target="_blank" href=${resultsForDisplay[0][i].url}>${resultsForDisplay[0][i].url}</a>
 </li>
 </h3>
 </div>`
