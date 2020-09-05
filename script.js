@@ -38,7 +38,13 @@ $("#js-form").submit(event => {
 event.preventDefault();
 searchState = $('#state-choice').val();
 maxResults = $('#max-results').val();
-searchURL = (URL + searchState + '&limit=' + maxResults + '&api_key=' + API);
+  const params ={
+    'stateCode': searchState,
+    'limit': maxResults,
+    'api_key': API,
+  }
+  let queryItems = Object.keys(params.map(key=> `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
+searchURL = (URL + queryItems.join('&'));
 submitRequest(searchURL);
 });
 }
