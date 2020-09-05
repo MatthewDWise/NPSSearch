@@ -43,7 +43,7 @@ maxResults = $('#max-results').val();
     'limit': maxResults,
     'api_key': API,
   }
-  let queryItems = Object.keys(params.map(key=> `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
+  let queryItems = Object.keys(params).map(key=> `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
 searchURL = (URL + queryItems.join('&'));
 submitRequest(searchURL);
 });
